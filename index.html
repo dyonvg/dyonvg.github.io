@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jouw Kreta Avontuur</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #4a4a4a;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: #f8f5ee;
+        }
+        .font-merriweather { font-family: 'Merriweather', serif; }
+        :root {
+            --color-deep-blue: #1a4a6b;
+            --color-sunset-orange: #d96a3d;
+            --color-earthy-brown: #a87f5a;
+            --color-olive-green: #6b8e23;
+            --color-beach-sand: #e8dcb9;
+            --color-sky-light: #f8f5ee;
+            --color-text-dark: #333;
+            --color-text-light: #f8f5ee;
+        }
+        .text-deep-blue { color: var(--color-deep-blue); }
+        .text-sunset-orange { color: var(--color-sunset-orange); }
+        .text-earthy-brown { color: var(--color-earthy-brown); }
+        .text-olive-green { color: var(--color-olive-green); }
+        .bg-deep-blue { background-color: var(--color-deep-blue); }
+        .bg-sunset-orange { background-color: var(--color-sunset-orange); }
+        .bg-beach-sand { background-color: var(--color-beach-sand); }
+        .bg-sky-light { background-color: var(--color-sky-light); }
+        .bg-olive-green { background-color: var(--color-olive-green); }
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(to bottom, #1a4a6b, #4a8c88);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+        #hero .content-box {
+            position: relative;
+            z-index: 2;
+            background: rgba(0,0,0,0.2);
+            backdrop-filter: blur(5px);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            color: var(--color-text-light);
+        }
+        /* Section Styling */
+        .section-block {
+            position: relative;
+            z-index: 1;
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
+        #explore-boat {
+            background-color: var(--color-beach-sand);
+            color: var(--color-text-dark);
+            clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+            margin-top: -80px;
+        }
+        #explore-quad {
+            background-color: var(--color-earthy-brown);
+            color: var(--color-text-light);
+            clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
+            margin-top: -80px;
+        }
+        #rsvp {
+            background-color: var(--color-sky-light);
+            color: var(--color-text-dark);
+            clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+            margin-top: -80px;
+        }
+        footer {
+            background-color: var(--color-deep-blue);
+            color: var(--color-text-light);
+        }
+        .image-hover-effect {
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, border-color 0.4s ease-in-out;
+            border: 4px solid transparent;
+        }
+        .image-hover-effect:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            border-color: var(--color-sunset-orange);
+        }
+        .button-hover-effect {
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-out, box-shadow 0.3s ease-in-out;
+        }
+        .button-hover-effect:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            background-color: #f0a868;
+        }
+        /* Scroll Animations (optional, not functional without JS) */
+        .animate-on-scroll { opacity: 1; transform: none; }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="content-box max-w-4xl mx-auto text-white">
+            <p class="text-xl uppercase font-bold mb-4">Jouw Avontuur Begint Hier</p>
+            <h1 class="text-6xl md:text-8xl font-extrabold font-merriweather leading-tight mb-8">
+                Kreta Ontdekken
+            </h1>
+            <p class="text-2xl md:text-3xl mb-12">
+                Lieve schat, bereid je voor op een onvergetelijke reis naar het hart van de Middellandse Zee.
+                <br>Een avontuur vol verborgen baaien, ruige bergen en de warme zon, speciaal voor jou!
+            </p>
+            <a href="#explore-boat" class="inline-block bg-sunset-orange text-white font-bold py-4 px-12 rounded-full text-xl hover:bg-[#f0a868] transition duration-300 shadow-lg button-hover-effect">
+                Verken de Mogelijkheden
+            </a>
+        </div>
+    </section>
+
+    <!-- Boottocht Section -->
+    <section id="explore-boat" class="section-block text-center">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-bold font-merriweather mb-16">Jouw Kreta Avontuur</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-16 mb-24">
+                <div class="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="relative rounded-3xl overflow-hidden w-full h-64 shadow-2xl image-hover-effect">
+                        <img src="images/fort.jpg"
+                            alt="Small boat gently floating on clear blue waters near the coast of Crete, sunlight sparkling on the sea, distant mountains under a bright sky, peaceful and adventurous atmosphere"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="relative rounded-3xl overflow-hidden w-full h-64 shadow-2xl image-hover-effect">
+                        <img src="images/baai.jpg"
+                            alt="Person snorkeling in turquoise water above a rocky seabed, surrounded by shimmering sunlight, sense of exploration and joy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="relative rounded-3xl overflow-hidden w-full h-64 shadow-2xl image-hover-effect sm:col-span-2">
+                        <img src="images/boat.jpg"
+                            alt="Secluded sandy cove with turquoise water, rocky cliffs, and lush greenery, inviting and tranquil mood"
+                            class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="md:w-1/2 text-left">
+                    <h3 class="text-4xl font-bold font-merriweather mb-6">Een prive boottocht?</h3>
+                    <p class="text-xl leading-relaxed">
+                        We gaan samen een bootje huren en lekker het water op, in een prachtige baai bij Elounda. Het water daar is meestal heel kalm, dus ideaal om relaxed te varen. We kunnen aanmeren waar wij willen, bijvoorbeeld bij een rustig strandje of een mooie plek om te zwemmen of te snorkelen. Met een pilletje en het rustige water moet het hopelijk wel goedkomen met de zeeziekte.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quadtocht Section -->
+    <section id="explore-quad" class="section-block text-center">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row-reverse items-center justify-center gap-16 mb-24">
+                <div class="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="relative rounded-3xl overflow-hidden w-full h-64 shadow-2xl image-hover-effect sm:col-span-2">
+                        <img src="images/quad.jpg"
+                             alt="Quad rijden langs een afgelegen strand op Kreta, met de zee op de achtergrond en een gevoel van vrijheid"
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="relative rounded-3xl overflow-hidden w-full h-64 shadow-2xl image-hover-effect">
+                        <img src="images/strand.jpeg"
+                             alt="Twee quads op een stoffige bergweg op Kreta, met uitzicht op de zee en bergen, zonlicht en avontuur"
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="relative rounded-3xl overflow-hidden w-full h-64 shadow-2xl image-hover-effect">
+                        <img src="images/forest.jpg"
+                             alt="Avontuurlijke quadtocht door olijfgaarden op Kreta, groene heuvels en blauwe lucht"
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="md:w-1/2 text-left">
+                    <h3 class="text-4xl font-bold font-merriweather mb-6">Of een prive quadtocht?</h3>
+                    <p class="text-xl leading-relaxed">
+                        Liever niet de zee op? Geen zorgen, dan pakken we gewoon samen de quad! We kunnen naar Preveli Beach & Palm Forest, Agiofarago Gorge met het strand, of het Katharo Plateau in de bergen. Lekker rijden, stoppen waar jij wilt, genieten van het uitzicht en samen de mooiste plekjes ontdekken – helemaal op jouw manier.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="section-block text-center">
+        <div class="max-w-3xl mx-auto z-10">
+            <h2 class="text-5xl md:text-6xl font-bold font-merriweather mb-8">Ga je mee?</h2>
+            <p class="text-2xl mb-12">
+                Ik kan niet wachten om dit onvergetelijke avontuur met jou te beleven!
+            </p>
+            <div class="text-4xl font-bold mb-8">
+                Veel liefs, <br> <span class="text-sunset-orange">Dyon</span>
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deep-blue text-white text-center py-8 px-4">
+        <p class="text-sm">&copy; Copyrighted by Murda, Murdle, Myrthli</p>
+    </footer>
+</body>
+</html>
