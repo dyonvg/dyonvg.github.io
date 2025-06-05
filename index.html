@@ -36,7 +36,7 @@
         .bg-olive-green { background-color: var(--color-olive-green); }
         /* Hero Section */
         #hero {
-            background: linear-gradient(to bottom, #1a4a6b, #4a8c88);
+            /* background: linear-gradient(to bottom, #1a4a6b, #4a8c88); */
             color: white;
             min-height: 100vh;
             display: flex;
@@ -139,7 +139,12 @@
 <body>
     <!-- Hero Section -->
     <section id="hero">
-        <div class="content-box max-w-4xl mx-auto text-white">
+        <!-- Video Background -->
+        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0" style="opacity:1;">
+            <source src="images/kreta.mp4" type="video/mp4">
+            Je browser ondersteunt geen video.
+        </video>
+        <div class="content-box max-w-4xl mx-auto text-white relative z-10">
             <p class="text-xl uppercase font-bold mb-4">Gefeliciteerd met je 24e verjaadag Murda!</p>
             <h1 class="text-6xl md:text-8xl font-extrabold font-merriweather leading-tight mb-8">
                 Jouw Bday Cadeau op Kreta
